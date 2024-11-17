@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="navbar">
+        {% include 'navbar.html' %}
+    </div>
+    <h1>Hot Apps</h1>
+    <div class="row mx-md-n5">
+    <div class="col px-md-5">
+    <div class="card" style="width: 18rem;">
+      <img src="{{ url_for('static', filename='expense.png') }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Expense Tracker</h5>
+        <p class="card-text">This app helps you track your expenses.</p>
+        <a href="#" class="btn btn-primary">Open App</a>
+      </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}

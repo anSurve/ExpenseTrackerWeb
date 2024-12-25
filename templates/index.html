@@ -1,20 +1,363 @@
 {% extends 'base.html' %}
-
+{% block title %}Aniket Surve{% endblock %}
 {% block content %}
-    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         {% include 'navbar.html' %}
     </nav>
-    <h1>Hot Apps</h1>
-    <div class="row mx-md-n5">
-    <div class="col px-md-5">
-    <div class="card" style="width: 18rem;">
-      <img src="{{ url_for('static', filename='expense.png') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Expense Tracker</h5>
-        <p class="card-text">This app helps you track your expenses.</p>
-        <a href="#" class="btn btn-primary">Open App</a>
-      </div>
-    </div>
-    </div>
-    </div>
+
+    <section class="hero-section" id="section_1">
+        <div class="section-overlay"></div>
+
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row">
+
+                <div class="col-12 mt-auto mb-5 text-center">
+
+                    <h1 class="text-white mb-5">Welcome to the world of <br/> Aniket Surve !!</h1>
+
+                    <a class="btn custom-btn smoothscroll" href="#section_2">See more</a>
+                </div>
+
+                <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                    <div class="date-wrap">
+                        <h5 class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                              <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                              <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"/>
+                            </svg>
+                            &nbsp;&nbsp;Data Engineer
+                        </h5>
+                    </div>
+
+                    <div class="location-wrap mx-auto py-3 py-lg-0">
+                        <h5 class="text-white">
+                            <i class="custom-icon bi-geo-alt me-2"></i>
+                            Pune, Maharashtra, India
+                        </h5>
+                    </div>
+
+                    <div class="social-share">
+                        <ul class="social-icon d-flex align-items-center justify-content-center">
+                            <li class="social-icon-item">
+                                <a href="https://www.facebook.com/aniket.surve.14" class="social-icon-link">
+                                    <span class="bi-facebook"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://x.com/Aniketsurve3" class="social-icon-link">
+                                    <span class="bi-twitter"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://www.instagram.com/_aniket.surve_/" class="social-icon-link">
+                                    <span class="bi-instagram"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-wrap">
+            <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                <source src="{{ url_for('static', filename='video/my-video.mp4') }}" type="video/mp4">
+
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="about-section section-padding" id="section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                    <div class="services-info">
+                        <h2 class="text-white mb-4">About Me</h2>
+
+                        <p class="text-white">I'm a 30-year-old data engineer with a passion for transforming raw data into meaningful insights. A fun-loving family man, I cherish quality time with loved ones. Cricket is my go-to pastime, where I channel my competitive spirit and love for teamwork both on and off the field.</p>
+
+                        <h6 class="text-white mt-4">Currently working at</h6>
+
+                        <p class="text-white">Synechron India Pvt. Ltd.</p>
+
+                        <h6 class="text-white mt-4">Education</h6>
+
+                        <p class="text-white">Master of Science, in Computer Science<br/>
+                        Bachelor of Engineering, in Information Technology</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="about-text-wrap">
+                        <img src="{{ url_for('static', filename='images/my-photo3.jpeg') }}" class="about-image img-fluid">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="artists-section section-padding" id="section_3">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-12 text-center">
+                    <h1 class="mb-4">My Applications</h1>
+                </div>
+
+                <div class="col-lg-5 col-12">
+                    <div class="artists-thumb">
+                        <div class="artists-image-wrap">
+                            <img src="{{ url_for('static', filename='images/expenses.jpg') }}"
+                                class="artists-image img-fluid">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                <span>Expense Tracker</span>
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Functionality:</strong>
+                                <a href="#">This app helps you track your daily expenses and serves you with visualizations on your spends</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-12">
+                    <div class="artists-thumb">
+                        <div class="artists-image-wrap">
+                            <img src="{{ url_for('static', filename='images/tasks.jpg') }}"
+                                class="artists-image img-fluid">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                <span>Tasks Tracker</span>
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Functionality:</strong>
+                                <a href="#">This app helps you track your daily tasks and helps you plan your day</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="artists-thumb">
+                        <img src="{{ url_for('static', filename='images/medicines.jpg') }}"
+                            class="artists-image img-fluid">
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                <span>Medicines</span>
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Functionality:</strong>
+                                <a href="#">This app serves as a household guide for the ayurvedic medicines</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section section-padding" id="section_6">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 mx-auto">
+                    <h2 class="text-center mb-4">Let's talk!!</h2>
+
+                    <nav class="d-flex justify-content-center">
+                        <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab"
+                            role="tablist">
+                            <button class="nav-link active" id="nav-ContactForm-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-ContactForm" type="button" role="tab"
+                                aria-controls="nav-ContactForm" aria-selected="false">
+                                <h5>Contact Form</h5>
+                            </button>
+
+                            <button class="nav-link" id="nav-ContactMap-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-ContactMap" type="button" role="tab"
+                                aria-controls="nav-ContactMap" aria-selected="false">
+                                <h5>Google Maps</h5>
+                            </button>
+                        </div>
+                    </nav>
+
+                    <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel"
+                            aria-labelledby="nav-ContactForm-tab">
+                            <form class="custom-form contact-form mb-5 mb-lg-0" action="#" method="post"
+                                role="form">
+                                <div class="contact-form-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input type="text" name="contact-name" id="contact-name"
+                                                class="form-control" placeholder="Full name" required>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input type="email" name="contact-email" id="contact-email"
+                                                pattern="[^ @]*@[^ @]*" class="form-control"
+                                                placeholder="Email address" required>
+                                        </div>
+                                    </div>
+
+                                    <input type="text" name="contact-company" id="contact-company"
+                                        class="form-control" placeholder="Company" required>
+
+                                    <textarea name="contact-message" rows="3" class="form-control"
+                                        id="contact-message" placeholder="Message"></textarea>
+
+                                    <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                        <button type="submit" class="form-control">Send message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-ContactMap" role="tabpanel"
+                            aria-labelledby="nav-ContactMap-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4314.663480435813!2d73.94318386509842!3d18.55270902491526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c4e6d47d57%3A0x1498d250fd70ddd8!2sWorld%20Trade%20Center%20Pune!5e1!3m2!1sen!2smy!4v1734200979108!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- You can easily copy the embed code from Google Maps -> Share -> Embed a map // -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-white mb-lg-0">Aniket Surve</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                        <ul class="social-icon d-flex justify-content-lg-end">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-twitter"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-apple"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-instagram"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-youtube"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-pinterest"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 mb-4 pb-2">
+                    <h5 class="site-footer-title mb-3">Links</h5>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="#section_1" class="site-footer-link">Home</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#section_2" class="site-footer-link">About Me</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#section_3" class="site-footer-link">My Apps</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#section_4" class="site-footer-link">My Skills</a>
+                        </li>
+
+                        <!--li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Pricing</a>
+                        </li-->
+
+                        <li class="site-footer-link-item">
+                            <a href="#section_6" class="site-footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <h5 class="site-footer-title mb-3">Have a question?</h5>
+
+                    <p class="text-white d-flex">
+                        <a href="mailto:aniket.surve.edu@gmail.com" class="site-footer-link">
+                            aniket.surve.edu@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                    <h5 class="site-footer-title mb-3">Location</h5>
+
+                    <p class="text-white d-flex mt-3 mb-2">
+                        WTC Pune, India</p>
+
+                    <a class="link-fx-1 color-contrast-higher mt-3" href="#section_6" >
+                        <span>Our Maps</span>
+                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="16" cy="16" r="15.5"></circle>
+                                <line x1="10" y1="18" x2="16" y2="12"></line>
+                                <line x1="16" y1="12" x2="22" y2="18"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
 {% endblock %}

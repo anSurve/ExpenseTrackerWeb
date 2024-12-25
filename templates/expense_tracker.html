@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Expense Tracker{% endblock %}
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark bg-dark">
+        {% include 'navbar.html' %}
+    </nav>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/apps">Apps</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Expense Tracker</li>
+      </ol>
+    </nav>
+    <center>
+    <h1>Expense Tracker</h1>
+
+    </center>
+{% endblock %}

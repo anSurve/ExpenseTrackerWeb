@@ -513,7 +513,6 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: calc(100vh);
 }
 
 .about-image {
@@ -558,11 +557,6 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: calc(100vh);
-}
-
-.my-journey-section .container .row {
-  height: 100%;
 }
 
 .ticket-form {
